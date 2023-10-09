@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "249576473123",
+    "firebase_url": "https://bodybody-e40ef-default-rtdb.firebaseio.com",
+    "project_id": "bodybody-e40ef",
+    "storage_bucket": "bodybody-e40ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249576473123:android:7c2f22468745fdb01ea796",
+        "android_client_info": {
+          "package_name": "com.bodybody.firebase.chat.activities"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "249576473123-tggbhc86kc3j0kb3mudcm2v61gf4dleb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bodybody.firebase.chat.activities",
+            "certificate_hash": "08c0370a53d6228fb0b973aa7288d4a580ed95e2"
+          }
+        },
+        {
+          "client_id": "249576473123-36e4kl5snb3p6us7juk9lppiina4ul9m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfybBY0XSSkysddS0oOziSDdTmWCirq58"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "249576473123-36e4kl5snb3p6us7juk9lppiina4ul9m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

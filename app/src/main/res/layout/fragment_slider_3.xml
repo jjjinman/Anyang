@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_container"
+    style="@style/SliderRootLayout"
+    android:background="@drawable/back_slide3"
+    tools:ignore="SpUsage">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/SliderTitle"
+        android:text="그룹 채팅으로 운동모임 시작!" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        style="@style/SliderImage"
+        app:lottie_rawRes="@raw/slider_chat_3" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/SliderDescription"
+        android:text="마음이 맞는 운동 파트너를 모집해 그룹 채팅을 만들어보세요." />
+</LinearLayout>

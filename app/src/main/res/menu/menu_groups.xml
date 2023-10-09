@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/itemAddGroup"
+        android:icon="@drawable/ic_group_add"
+        android:title="그룹 추가하기"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/itemGroupInfo"
+        android:title="그룹 정보"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/itemBlockUnblock"
+        android:title="차단하기"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/itemClearMyChats"
+        android:title="채팅 목록 비우기"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/itemEditGroup"
+        android:title="그룹 수정하기"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/itemLeaveGroup"
+        android:title="그룹 떠나기"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/itemDeleteGroup"
+        android:title="그룹 삭제하기"
+        app:showAsAction="never" />
+</menu>

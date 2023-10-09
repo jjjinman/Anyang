@@ -1,0 +1,127 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion _compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.bodybody.firebase.chat.activities"
+        minSdkVersion _minSdkVersion
+        targetSdkVersion _targetSdkVersion
+        versionCode 5
+        versionName "2.1"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+        buildConfigField 'boolean', "ADS_SHOWN", "true"//true or false
+
+        resValue "string", "google_maps_key",
+                (project.findProperty("AIzaSyAX4oy_TrX4CvPM6HMGP96swOipT3xxFR0") ?: "")
+
+        //테스트용 구글 광고 키
+        //광고 키는 애드몹에 들어가서 광고를 만들고 main_app_id,
+        //banner_app_id, interstitial_app_id를 생성한 뒤 붙여줍니다.
+        //이건 프로젝트의 본 취지와 다르기 때문에 사용하지 않아도 되므로 생략합니다.
+        resValue 'string', "main_app_id", "ca-app-pub-8676187581068146~3154011298"
+        resValue 'string', "banner_app_id", "ca-app-pub-3940256099942544/6300978111"
+        resValue 'string', "interstitial_app_id", "ca-app-pub-3940256099942544/1033173712"
+
+        //지도 또는 장소를 출력하는 키
+        //구글 클라우드에 들어가서 key_android와 key_maps를 사용하기 위한
+        //키를 입력합니다. https://console.cloud.google.com/
+        //이 키를 받기 위해선 콘솔에서 카드 청구 정보를 활성화해야 합니다.
+        resValue 'string', "key_android", "AIzaSyCfO3BHO1SITJf-izQG3J-_3sGgHAylSWE"
+        resValue 'string', "key_maps", "AIzaSyAX4oy_TrX4CvPM6HMGP96swOipT3xxFR0"
+
+        resValue 'string', "authority", applicationId + ".fileprovider"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
+
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:30.2.0')
+    //Firebase Libraries
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-core'
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-storage'
+    implementation 'com.google.firebase:firebase-messaging'
+//    implementation 'com.google.firebase:firebase-ads'
+    implementation 'com.google.android.gms:play-services-ads:21.3.0'
+    //Google Sign In
+    implementation 'com.google.android.gms:play-services-auth:20.4.0'
+    //Circle ImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //Ripple Effect
+    implementation 'com.balysv:material-ripple:1.0.2'
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    //Cropper
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    //Emoji TextView
+    implementation 'com.vanniktech:emoji-ios:0.7.0'
+    // Places library
+    implementation 'com.google.android.libraries.places:places:2.7.0'
+    // PING Place Picker
+    implementation 'com.github.rtchagas:pingplacepicker:2.2.0'
+    //RecordView
+    implementation project(path:':record-view')
+    //Contacts Picker
+    implementation 'com.github.broakenmedia:MultiContactPicker:1.8.5'
+    //OnBoarding
+    implementation 'com.github.AppIntro:AppIntro:6.1.0'
+    implementation 'com.airbnb.android:lottie:4.1.0'
+    //Popup Window
+    implementation "com.github.skydoves:powermenu:2.2.0"
+    //Fast Scroller
+    implementation 'com.simplecityapps:recyclerview-fastscroll:2.0.1'
+    //Google Sign In Button
+    implementation 'com.shobhitpuri.custombuttons:google-signin:1.1.0'
+
+    implementation 'androidx.work:work-runtime:2.7.1'
+    implementation 'com.github.philjay:MPAndroidChart:v3.1.0'
+
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+}

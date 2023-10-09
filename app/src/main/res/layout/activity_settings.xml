@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpUsage">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/amber_600"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/MenuStyle">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView"
+        android:layout_below="@+id/appLayout"
+        android:background="@color/blue_50">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nested_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:scrollingCache="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/fontRegularStyle"
+                        android:text="프로필 설정"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:cardCornerRadius="@dimen/padding0"
+                        app:cardElevation="@dimen/padding2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/layoutNotification"
+                                style="@style/settingLayout">
+
+                                <ImageButton
+                                    style="@style/settingImage"
+                                    android:contentDescription="@string/cDescription"
+                                    app:srcCompat="@drawable/ic_set_notifications"
+                                    app:tint="@color/cyan_300" />
+
+                                <TextView
+                                    style="@style/fontLightSettingStyle"
+                                    android:layout_marginEnd="@dimen/padding3"
+                                    android:text="중요 알림 켜기"
+                                    android:textStyle="bold"/>
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/notificationOnOff"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/padding10"
+                                    android:checked="true"
+                                    app:thumbTint="@color/switch_color_primary" />
+
+                            </LinearLayout>
+
+                            <View style="@style/settingHorizontalLine" />
+
+                            <LinearLayout
+                                android:id="@+id/layoutRTL"
+                                style="@style/settingLayout">
+
+                                <ImageButton
+                                    style="@style/settingImage"
+                                    android:contentDescription="@string/cDescription"
+                                    app:srcCompat="@drawable/ic_set_language"
+                                    app:tint="@color/cyan_300" />
+
+                                <TextView
+                                    style="@style/fontLightSettingStyle"
+                                    android:layout_marginEnd="@dimen/padding3"
+                                    android:text="글자 좌우 회전하기"
+                                    android:textStyle="bold"/>
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/rtlOnOff"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/padding10"
+                                    android:checked="false"
+                                    app:thumbTint="@color/switch_color_primary" />
+
+                            </LinearLayout>
+
+                            <View style="@style/settingHorizontalLine" />
+
+                            <LinearLayout
+                                android:id="@+id/layoutPrivacySettings"
+                                style="@style/settingLayout">
+
+                                <ImageButton
+                                    style="@style/settingImage"
+                                    android:contentDescription="@string/cDescription"
+                                    app:srcCompat="@drawable/ic_set_privacy_settings"
+                                    app:tint="@color/blue_300"/>
+
+
+                                <TextView
+                                    style="@style/fontLightSettingStyle"
+                                    android:text="프라이버시 설정"
+                                    android:textStyle="bold"/>
+
+                                <ImageButton
+                                    style="@style/settingImageGray"
+                                    android:contentDescription="@string/cDescription" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        style="@style/fontRegularStyle"
+                        android:text="@string/general_setting"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:cardCornerRadius="@dimen/padding0"
+                        app:cardElevation="@dimen/padding2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+
+                            <View style="@style/settingHorizontalLine" />
+
+                            <LinearLayout
+                                android:id="@+id/layoutShare"
+                                style="@style/settingLayout">
+
+                                <ImageButton
+                                    style="@style/settingImage"
+                                    android:contentDescription="@string/cDescription"
+                                    app:srcCompat="@drawable/ic_set_share"
+                                    app:tint="@color/blue_500" />
+
+                                <TextView
+                                    style="@style/fontLightSettingStyle"
+                                    android:text="바디바디 App 공유하기"
+                                    android:textStyle="bold"/>
+
+                                <ImageButton
+                                    style="@style/settingImageGray"
+                                    android:contentDescription="@string/cDescription" />
+
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:id="@+id/layoutLogout"
+                                style="@style/settingLayout">
+
+                                <ImageButton
+                                    style="@style/settingImage"
+                                    android:contentDescription="@string/cDescription"
+                                    app:srcCompat="@drawable/ic_set_exit_to_app"
+                                    app:tint="@color/blue_600" />
+
+                                <TextView
+                                    style="@style/fontLightSettingStyle"
+                                    android:text="로그아웃"
+                                    android:textStyle="bold"/>
+
+                                <ImageButton
+                                    style="@style/settingImageGray"
+                                    android:contentDescription="@string/cDescription" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/padding10"
+                        android:text="@string/app_company"
+                        android:textSize="@dimen/font_twelve" />
+
+                    <TextView
+                        android:id="@+id/txtAppVersion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/padding10"
+                        android:text="@string/settingVersion"
+                        android:textSize="@dimen/font_twelve" />
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_app_id" />
+</RelativeLayout>

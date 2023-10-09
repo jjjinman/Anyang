@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/padding16">
+
+    <TextView
+        android:id="@+id/textView_additional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding5"
+        android:layout_marginTop="@dimen/padding10"
+        android:layout_marginRight="@dimen/padding5"
+        android:fontFamily="@font/roboto_regular"
+        android:text="온라인/오프라인" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <CheckBox
+            android:id="@+id/chkOnline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start|center_vertical"
+            android:text="온라인"
+            android:textAlignment="viewStart" />
+
+        <CheckBox
+            android:id="@+id/chkOffline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start|center_vertical"
+            android:text="오프라인"
+            android:textAlignment="viewStart" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding5"
+        android:layout_marginTop="@dimen/padding16"
+        android:fontFamily="@font/roboto_regular"
+        android:text="성별" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <CheckBox
+            android:id="@+id/chkMale"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start|center_vertical"
+            android:text="남자"
+            android:textAlignment="viewStart" />
+
+        <CheckBox
+            android:id="@+id/chkFemale"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start|center_vertical"
+            android:text="여자"
+            android:textAlignment="viewStart" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <CheckBox
+            android:id="@+id/chkNotSet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start|center_vertical"
+            android:text="이외의 다른 성별"
+            android:textAlignment="viewStart" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding5"
+        android:layout_marginTop="@dimen/padding16"
+        android:fontFamily="@font/roboto_regular"
+        android:text="프로필 사진" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <CheckBox
+            android:id="@+id/chkWithPicture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start|center_vertical"
+            android:text="사진이 있는 유저만 보기"
+            android:textAlignment="viewStart" />
+
+        <CheckBox
+            android:id="@+id/chkWithoutPicture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start|center_vertical"
+            android:text="사진이 없는 유저만 보기"
+            android:textAlignment="viewStart" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding15"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            style="@style/DialogCancelButton"
+            android:text="취소" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDone"
+            style="@style/DialogDoneButton"
+            android:text="저장" />
+
+    </LinearLayout>
+
+</LinearLayout>
